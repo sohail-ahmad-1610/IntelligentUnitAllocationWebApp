@@ -9,7 +9,10 @@
       <div class="table-title">
         <div class="row">
           <div class="col-sm-6">
-            <h2>Manage <b>Semesters</b></h2>
+            <h2>Manage <b>Units</b></h2>
+          </div>
+          <div class="col-sm-6">
+            <a href="#" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Unit</span></a>            
           </div>
         </div>
       </div>
@@ -19,9 +22,8 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Name</th>
-              <th>Batch</th>
-              <th class="" style="display: inline-block;">Actions</th>
+              <th>Value</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -29,11 +31,9 @@
             <tr>
               <td>{{ loop.index + (page - 1) * per_page }}</td>
               <td>{{ user }}</td>
-              <td>2019</td>
               <td>
-                <a href="lecturers" class="edit"><i class="material-icons" data-toggle="tooltip" title="Lecturers">account_box</i></a>
-                <a href="tutors" class="delete"><i class="material-icons" data-toggle="tooltip" title="Tutors">account_box</i></a>
-                <a href="units" class="delete"><i class="material-icons" data-toggle="tooltip" title="Units">subject</i></a>
+                <a href="#" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                <a href="#" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
               </td>
             </tr>
             {% endfor %}
